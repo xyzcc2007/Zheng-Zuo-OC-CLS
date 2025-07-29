@@ -13,7 +13,7 @@ To respect copyright, we recommend that users review the original code and obtai
 ---
 
 ## Requirements
-The code provides many optional parameters. Please refer to **`get_args()`** for details.
+environment.yml is provided.
 
 ---
 
