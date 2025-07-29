@@ -522,7 +522,7 @@ class PrognosisFeaturesDataset(FeaturesDataset):
         info += '{} survival analysis\n'.format(self.survival_type)
         return info
 
-def build_dicomdataset(info_dir='/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/naiyao.csv'):
+def build_dicomdataset(info_dir=''):
     info = pd.read_csv(info_dir)
     info = info.loc[:, ['PATNAME', 'PATNAMEENG', 'AGE', 'DIAGNOSIS', 'ORIGIN', 'MASK', 'naiyao', 'naiyao1']] 
     info.rename(columns={'naiyao1': 'class', 'ORIGIN': 'dicom_dir', 'MASK': 'nrrd_dir'}, inplace=True)
@@ -531,7 +531,7 @@ def build_dicomdataset(info_dir='/home/hoo/Documents/lllab/zuoruochen/RS/ovarian
     dataset = DicomDataset(info)
     return dataset
 
-def build_dicomnrrddataset(info_dir='/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/naiyao.csv'):
+def build_dicomnrrddataset(info_dir=''):
     info = pd.read_csv(info_dir)
     info = info.loc[:, ['PATNAME', 'PATNAMEENG', 'AGE', 'DIAGNOSIS', 'ORIGIN', 'MASK', 'naiyao', 'naiyao1']] 
     info.rename(columns={'naiyao1': 'class', 'ORIGIN': 'dicom_dir', 'MASK': 'nrrd_dir'}, inplace=True)
@@ -541,16 +541,16 @@ def build_dicomnrrddataset(info_dir='/home/hoo/Documents/lllab/zuoruochen/RS/ova
     return dataset
 
 def build_features_dataset():
-    info_dir = '/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/info_for_radiomics.csv'
-    features_dirs = ['/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/radiomics_features.csv']
+    info_dir = ''
+    features_dirs = ['']
     return FeaturesDataset(info_dir, features_dirs)
 
 def build_prognosis_features_dataset():
-    info_dir = '/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/prognosis_info_for_radiomics.csv'
-    features_dirs = ['/home/hoo/Documents/lllab/zuoruochen/RS/ovarian_cancer_classification/notebook/dataset/radiomics_features.csv']
+    info_dir = ''
+    features_dirs = ['']
     return PrognosisFeaturesDataset(info_dir, features_dirs)
 
 if __name__ == '__main__':
     # This is just an example, BaseDataset should not be instantiated directly
-    dataset = BaseDataset('/data/dataset/zrc_dataset/ovarian_cancer_classification/visualize_20210525select')
+    dataset = BaseDataset('')
     print(dataset[0])
