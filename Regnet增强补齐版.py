@@ -2365,7 +2365,7 @@ def get_args():
     parser.add_argument('--model', default='regnety_032', 
                        choices=['regnety_016', 'regnety_008', 'regnety_032', 'regnetx_016', 'regnetx_008', 'regnetx_032'],
                        help='RegNet模型类型')
-    parser.add_argument('--log_root', default='/gpu-dir/ZCC/Radiomics/group_train_log', help='Log directory')
+    parser.add_argument('--log_root', default='', help='Log directory')
     parser.add_argument('--pretrain', default='DEFAULT', help='Pretrain weights')
     parser.add_argument('--gpu_ids', default='2', type=str, help='GPU IDs')
     parser.add_argument('--use_progressive_dim', action='store_true', default=False, 
@@ -2454,7 +2454,7 @@ if __name__ == "__main__":
     print("RegNet + ROI约束训练 (单GPU + LayerNorm修复版)")
     print("=" * 60)
     print(f"模型: {args.model}")
-    print(f"ROI约束策略: 输入层 + 输出层")
+    print(f"ROI约束策略: 输入层 + 输出层+区域外惩罚")
     print(f"区域外惩罚权重: {args.roi_penalty_lambda}")
     print(f"归一化: LayerNorm (修复BatchNorm1d问题)")
     print(f"GPU设置: 单GPU (修复多GPU ROI损失问题)")
