@@ -2365,7 +2365,7 @@ def get_args():
     parser.add_argument('--model', default='regnety_032', 
                        choices=['regnety_016', 'regnety_008', 'regnety_032', 'regnetx_016', 'regnetx_008', 'regnetx_032'],
                        help='RegNet模型类型')
-    parser.add_argument('--log_root', default='/gpu-dir/ZCC/Radiomics/group_train_log', help='Log directory')
+    parser.add_argument('--log_root', default='', help='Log directory')
     parser.add_argument('--pretrain', default='DEFAULT', help='Pretrain weights')
     parser.add_argument('--gpu_ids', default='2', type=str, help='GPU IDs')
     parser.add_argument('--use_progressive_dim', action='store_true', default=False, 
@@ -2387,7 +2387,7 @@ def get_args():
     parser.add_argument('--prefetch', default=4, type=int, help='Prefetch size')
     
     # ROI约束参数
-    parser.add_argument('--use_output_roi_constraint', action='store_true', default=False, 
+    parser.add_argument('--use_output_roi_constraint', action='store_true', default=True, 
                    help='使用输出层ROI约束')
     parser.add_argument('--roi_penalty_lambda', default=0, type=float, help='ROI区域外惩罚损失权重')
     
