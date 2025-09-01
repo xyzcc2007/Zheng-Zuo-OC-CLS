@@ -723,13 +723,13 @@ def get_pure_inference_args():
     parser.add_argument('--model', default='regnety_032',
                        choices=['regnety_016', 'regnety_008', 'regnety_032', 'regnetx_016', 'regnetx_008'])
     parser.add_argument('--model_path', 
-                       default="/gpu-dir/ZCC/Radiomics/group_train_log/cyst_oc/regnety_032/2025-08-03/test6/cv1/best_model.pth",
+                       default="",
                        help='Path to trained domain adaptation model')
     parser.add_argument('--threshold', type=float, default=0.5, help='Classification threshold')
     parser.add_argument('--gpu_ids', default='1')
     parser.add_argument('--batch_size', default=8, type=int, help='Can be larger since no training tricks')
     parser.add_argument('--num_workers', default=4, type=int)
-    parser.add_argument('--log_root', default='/gpu-dir/ZCC/Radiomics/test_log/regnet_domain_inference/szl')
+    parser.add_argument('--log_root', default='')
     
     # 模型架构参数（会被自动检测覆盖）
     parser.add_argument('--dropout', default=0.2, type=float, help='Lower dropout for inference')
