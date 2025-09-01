@@ -11,7 +11,7 @@
 ---
 
 ## 环境需求
-我们提供了conda环境包
+我们提供了conda环境包和pip的requirements，python版本为3.10
 
 ---
 
