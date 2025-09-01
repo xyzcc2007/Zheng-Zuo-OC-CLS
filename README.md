@@ -12,7 +12,7 @@ To respect copyright, we recommend that users review the original code and obtai
 ---
 
 ## Environment
-We provide a **conda environment package** for reproducibility.
+We provide a **conda environment package** and **pip requirements.txt**for reproducibility.Python version 3.10.
 
 ---
 
