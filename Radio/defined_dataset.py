@@ -48,19 +48,19 @@ def load_mix_dataset(roots, imgaug_augment=None, torch_augment=None, is_eval=Fal
 
 def load_breakhis(imgaug_augment=None, torch_augment=None, is_eval=False):
     # Load BreakHis dataset.
-    roots = ['/gpu-dir/dataset/zrc_dataset/public_dataset/BreakHis_256/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_feng_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/ROSE_formatv7_20220429_224/info/Feng_example.csv',]
+    roots = ['',]
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_feng_dataset_vol12_extend(imgaug_augment=None, torch_augment=None, is_eval=False):
-    root='/gpu-dir/dataset/zrc_dataset/ROSE/ROSE_formatv7_20220429_224'
+    root=''
     roots = [os.path.join(root, 'info', 'Feng_example.csv'),
              os.path.join(root, 'info', 'Feng_20211016_extend.csv'),
              os.path.join(root, 'info', 'Feng_example_vol12.csv'),]
@@ -69,55 +69,55 @@ def load_feng_dataset_vol12_extend(imgaug_augment=None, torch_augment=None, is_e
 
 
 def load_random_sample(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patches_clf/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSample/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_v2(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSamplev2_select/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_v2_224(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSamplev2_select_224/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_npy(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSample_npy/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_macenko(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSampleMacenko/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_reinhard(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSampleReinhard/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_grid_sample_vahadane(imgaug_augment, torch_augment, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/ROSE/patch_dataset/GridSampleVahadane/info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_shaw_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    root='/gpu-dir/dataset/zrc_dataset/ROSE/ROSE_formatv7_20220429_224'
+    root=''
     roots = [os.path.join(root, 'info', 'Batch1_20200416_origin.csv'),
              os.path.join(root, 'info', 'Batch2_20200710_origin.csv'),
              os.path.join(root, 'info', 'Batch3_20201031_origin.csv'),
@@ -128,40 +128,40 @@ def load_shaw_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
 
 
 def load_cyst_oc_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    roots = ['/gpu-dir/ZCC/Radiomics/nangzhongclf/train_ROI_split补全病理.xlsx']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_cyst_oc_stage1_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/OvarianCancer/nangzhongclf_visualize/cyst_info/ov_batch123_stage1_cyst_batch2_select_foreground_info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_cyst_oc_nopreprocess_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/OvarianCancer/nangzhongclf_visualize/cyst_info/ov_batch123_cyst_batch2_select_info.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
 
 def load_cyst_oc_exval(imgaug_augment=None, torch_augment=None, is_eval=True):
     """加载外部验证数据集（默认不应用数据增强）"""
-    roots = ['/gpu-dir/ZCC/Radiomics/省肿瘤阴超蛋白and影像外部验证.xlsx']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval=True)  # 强制设为评估模式
     return dataset
 
 
 def szl_dataset(imgaug_augment=None, torch_augment=None, is_eval=True):
     """加载内部验证数据集（默认不应用数据增强）"""
-    roots = ['/gpu-dir/ZCC/Radiomics/nangzhongclf/test_ROI_split补全病理.xlsx']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval=True)  # 强制设为评估模式
     return dataset
 
 
 def syf_dataset(imgaug_augment=None, torch_augment=None, is_eval=True):
     """加载邵逸夫医院测试数据集（默认不应用数据增强）"""
-    info_path = "/gpu-dir/ZCC/Radiomics/nangzhongclf/邵逸夫exval_final.xlsx"
+    info_path = ""
     info = pd.read_excel(info_path)
     
     # 不应用任何数据增强，使用Image2TensorDataset
@@ -170,7 +170,7 @@ def syf_dataset(imgaug_augment=None, torch_augment=None, is_eval=True):
 
 
 def load_cyst_oc_raman_dataset(imgaug_augment=None, torch_augment=None, is_eval=False):
-    roots = ['/gpu-dir/dataset/zrc_dataset/OvarianCancer/nangzhongclf_visualize/raman samples sum 224/patientinfo.csv']
+    roots = ['']
     dataset = load_mix_dataset(roots, imgaug_augment, torch_augment, is_eval)
     return dataset
 
