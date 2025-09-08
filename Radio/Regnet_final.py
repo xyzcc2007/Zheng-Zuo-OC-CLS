@@ -1119,16 +1119,15 @@ def improved_collate_fn(batch):
             
             # 确定增强级别
             if current_size == 1:
-                level = 'level_4'
+                levels = ['level_4', 'level_3', 'level_2', 'level_1']
             elif current_size in [2, 3]:
-                level = 'level_3'
+                levels = ['level_3', 'level_2', 'level_1']
             elif current_size in [4, 5]:
-                level = 'level_2'
+                levels = ['level_2', 'level_1']
             elif current_size in [6, 7]:
-                level = 'level_1'
+                levels = ['level_1']
             else:  # current_size >= 8
-                # 不需要增强
-                pass
+                levels = []  # 不需要增强
             
             # 智能增强策略
             for i in range(needed_count):
