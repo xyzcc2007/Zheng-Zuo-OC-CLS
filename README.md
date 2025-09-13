@@ -40,13 +40,13 @@ Additional notes:
 ## Usage
 Before running the program, please ensure that the **library import paths** are consistent with the directory where your code is located.
 
-To make the calculation process clearer, the final multi-fusion version is presented in a formula-based form, but this may affect AUC and AUPRC. In practical use, it can be simplified as follows:
+To make the calculation process clearer, the Signal-guided malignancy enhancement strategy is presented in a formula-based form in final_multimodal（最终方案）.py, but this may affect AUC and AUPRC. In practical use, it can be simplified as follows:
 
 has_signal = image_prob > 0.5 or protein_prob > 0.5
 if has_signal：
   threshold = 0.468 #（calculated X value）
 else：
-			threshold = 0.5
+  threshold = 0.5
 
 
 This code is simple, easy to maintain, and will not affect AUC or AUPRC. The specific x value can be referenced from the tables in my paper.
