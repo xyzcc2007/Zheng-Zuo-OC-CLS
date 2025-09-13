@@ -38,10 +38,12 @@
 ## 使用说明
 在运行程序之前，请确保 **库导入路径** 与程序所在的目录保持一致。
 
-为看清运算过程，提供的最终融合版本为计算公式版，会影响AUC和AUPRC，实际使用时可简化为
-    has_signal = image_prob > 0.5 or protein_prob > 0.5
-    threshold = 0.470（即计算出的x值） if has_signal else 0.5
-    return fused_prob > threshold
+为看清运算过程，提供的最终多模态版本的恶性保底策略为计算公式版，会影响AUC和AUPRC，实际使用时可简化为
+  has_signal = image_prob > 0.5 or protein_prob > 0.5
+  if has_signal：
+    threshold = 0.468 #（计算出的X值）
+  else：
+  			threshold = 0.5
 代码简单易维护且不会影响AUC和AUPRC，具体x值可参考我paper中的表格
 ---
 
