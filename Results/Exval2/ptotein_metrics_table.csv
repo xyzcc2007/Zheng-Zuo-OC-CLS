@@ -1,0 +1,9 @@
+Metric,Value,Description
+AUC,0.906,Area Under ROC Curve
+Accuracy,0.824,Overall Accuracy
+Sensitivity,0.914,True Positive Rate
+Specificity,0.727,True Negative Rate
+PPV,0.780,Positive Predictive Value
+NPV,0.889,Negative Predictive Value
+F1-Score,0.842,Harmonic Mean of Precision and Recall
+Average Precision,0.921,Area Under PR Curve
